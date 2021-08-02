@@ -46,7 +46,7 @@ function  snapshot() {
     else {
         console.log(result);
         document.getElementById("gesture").innerHTML=result[0].label;
-        document.getElementById("gesture1").innerHTML=result[1].confidence.toFixed(4); 
+        document.getElementById("result_gesture").innerHTML=result[1].confidence.toFixed(4); 
         prediction1=result[0].label;
         prediction2=result[1].label;
 
@@ -55,13 +55,13 @@ function  snapshot() {
             document.getElementById("result_gesture").innerHTML="&#128077";
         }
         if (result[0].label=="Thumbs Up") {
-            document.getElementById("result_gesture").innerHTML="&#128533";
+            document.getElementById("result_gesture").innerHTML="&#128075";
         }
         if (result[0].label=="Thumbs Down") {
             document.getElementById("result_gesture").innerHTML="&#128076";
         }
-        if (result[0].label=="Wave") {
-            document.getElementById("result_gesture").innerHTML="&#128075";
+        if (result[0].label=="Ok, I understand") {
+            document.getElementById("result_gesture").innerHTML="&#128533";
         }
         
         if (result[1].label=="Pointing Up") {
@@ -73,7 +73,7 @@ function  snapshot() {
         if (result[1].label=="Thumbs Down") {
             document.getElementById("result_gesture1").innerHTML="&#128076";
         }
-        if (result[1].label=="Wave") {
+        if (result[1].label=="Ok, I understand") {
             document.getElementById("result_gesture1").innerHTML="&#128075";
         } 
     
